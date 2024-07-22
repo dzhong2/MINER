@@ -1,0 +1,24 @@
+*.pickle
+.idea/
+*.pyc
+*.so
+data/*/*.txt
+data/*/train_interactions.pkl
+data/*/test_interactions.pkl
+data/beauty/test_interactions.pkl
+KGAT/datasets/*
+data/*/kg_dict.pkl
+data/*/rel_dict.pkl
+data/*/adj.pkl
+data/*/lap.pkl
+figures/
+A1/
+Attack 3/
+attack1/
+attack2/
+defense/
+density/
+*.pptx
+*.pdf
+results/
+*.csv
