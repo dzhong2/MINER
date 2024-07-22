@@ -773,49 +773,6 @@ if __name__ == "__main__":
     short_name_dict = {"am": "amazon-book-shadow",
                        "la": "last-fm-shadow",
                        "ye": "yelp2018-shadow"}
-
-    '''embeddings_loc = "./KGAT_new/trained_model/{}/{}/".format(shadow_model, dataset)
-    lab_loc = "../../../../Wang-ds/dzhong2/MIA_against_KBRec/{}/{}/".format(shadow_model, dataset)
-    if not os.path.exists(lab_loc):
-        os.makedirs(lab_loc)
-        print("Init lab loc: " + lab_loc)
-    train_sub_name = "MIA_input_train.csv" if not args.partial_option else "MIA_input_train({}).csv".format(args.partial_option)
-    test_sub_name = "MIA_input_test.csv" if not args.partial_option else "MIA_input_test({}).csv".format(
-        args.partial_option)
-    if os.path.exists(embeddings_loc + train_sub_name):
-        print("Moving {}\n"
-                  "    into {}".format(embeddings_loc + train_sub_name, lab_loc + train_sub_name)
-                  )
-        shutil.copyfile(embeddings_loc + train_sub_name,
-                            lab_loc + train_sub_name)
-        # check and delete source
-        if os.path.exists(lab_loc + train_sub_name):
-            os.remove(embeddings_loc + train_sub_name)
-            print("removed "+embeddings_loc+train_sub_name)
-    else:
-        print("Skip moving file from " + embeddings_loc + train_sub_name)
-
-    print("loading training from:" + lab_loc + train_sub_name)
-    array_train = pd.read_csv(lab_loc + train_sub_name, header=None).to_numpy()
-    if model != shadow_model:
-        test_sub_name = test_sub_name.replace("test", "test({})".format(model))
-
-    if os.path.exists(embeddings_loc + test_sub_name):
-        print("Moving {}\n"
-                "    into {}".format(embeddings_loc + test_sub_name, lab_loc + test_sub_name)
-                  )
-        shutil.copyfile(embeddings_loc + test_sub_name,
-                            lab_loc + test_sub_name)
-        # check and delete source
-        if os.path.exists(lab_loc + test_sub_name):
-            os.remove(embeddings_loc + test_sub_name)
-            print("removed "+embeddings_loc+test_sub_name)
-    else:
-        print("Skip moving file from " + embeddings_loc + test_sub_name)
-
-    testing_file = lab_loc + test_sub_name
-    print("loading testing from:" + testing_file)
-    array_test = pd.read_csv(testing_file, header=None).dropna().to_numpy()'''
     if args.partial_option == 0:
         attack_type = 1
         target_data = dataset
